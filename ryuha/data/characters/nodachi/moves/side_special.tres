@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_7suti"]
+[ext_resource type="Script" path="res://scripts/combat/behaviors/armor_behavior.gd" id="2_ox1re"]
+[ext_resource type="Script" path="res://scripts/combat/behaviors/motion_behavior.gd" id="3_v405b"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="4_xpq1f"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="5_n6hm0"]
+
+[sub_resource type="Resource" id="Resource_60luo"]
+script = ExtResource("2_ox1re")
+start_frame = 4
+end_frame = 16
+max_damage = 12.0
+
+[sub_resource type="Resource" id="Resource_q0f7e"]
+script = ExtResource("3_v405b")
+start_frame = 8
+end_frame = 18
+velocity = Vector2(950, 0)
+set_x = true
+set_y = false
+charge_bonus = 0.0
+air_only = false
+
+[sub_resource type="Resource" id="Resource_4hck3"]
+script = ExtResource("4_xpq1f")
+id = 0
+group = 0
+start_frame = 10
+end_frame = 18
+rehit_rate = 0
+shape = 0
+offset = Vector2(67.2, -106.4)
+radius = 58.24
+size = Vector2(60, 40)
+damage = 11.0
+angle = 40.0
+base_knockback = 55.0
+knockback_growth = 70.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[resource]
+script = ExtResource("5_n6hm0")
+id = &"side_special"
+display_name = "Avalanche Step"
+startup = 10
+active = 9
+recovery = 28
+landing_lag = 6
+chain_from_frame = 0
+hitboxes = Array[ExtResource("4_xpq1f")]([SubResource("Resource_4hck3")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 1
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 0.0
+swing_sfx = &"swing_light"
+trail_enabled = true
+trail_center = Vector2(11.2, -100.8)
+trail_radius = 100.8
+trail_from_deg = 75.0
+trail_to_deg = -25.0
+trail_width = 24.0
+behaviors = Array[ExtResource("1_7suti")]([SubResource("Resource_60luo"), SubResource("Resource_q0f7e")])

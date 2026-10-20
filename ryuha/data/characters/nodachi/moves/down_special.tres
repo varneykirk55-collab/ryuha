@@ -1,0 +1,88 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_fskqj"]
+[ext_resource type="Script" path="res://scripts/combat/behaviors/armor_behavior.gd" id="2_yhjio"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="3_f21r7"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="4_qswl3"]
+
+[sub_resource type="Resource" id="Resource_17fih"]
+script = ExtResource("2_yhjio")
+start_frame = 6
+end_frame = 24
+max_damage = 0.0
+
+[sub_resource type="Resource" id="Resource_8tg2p"]
+script = ExtResource("3_f21r7")
+id = 0
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 0
+offset = Vector2(162.4, -89.6)
+radius = 69.44
+size = Vector2(60, 40)
+damage = 22.0
+angle = 42.0
+base_knockback = 50.0
+knockback_growth = 96.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.6
+shield_damage = 0.0
+hit_sfx = &"hit_heavy"
+
+[sub_resource type="Resource" id="Resource_yj5ac"]
+script = ExtResource("3_f21r7")
+id = 1
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 0
+offset = Vector2(274.4, -22.4)
+radius = 47.04
+size = Vector2(60, 40)
+damage = 12.0
+angle = 60.0
+base_knockback = 50.0
+knockback_growth = 70.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[resource]
+script = ExtResource("4_qswl3")
+id = &"down_special"
+display_name = "Heaven-Splitting Overhead"
+startup = 24
+active = 5
+recovery = 44
+landing_lag = 6
+chain_from_frame = 0
+hitboxes = Array[ExtResource("3_f21r7")]([SubResource("Resource_8tg2p"), SubResource("Resource_yj5ac")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = true
+air_uses = 0
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 0.0
+swing_sfx = &"swing_heavy"
+trail_enabled = true
+trail_center = Vector2(22.4, -123.2)
+trail_radius = 196.0
+trail_from_deg = 125.0
+trail_to_deg = -35.0
+trail_width = 46.0
+behaviors = Array[ExtResource("1_fskqj")]([SubResource("Resource_17fih")])

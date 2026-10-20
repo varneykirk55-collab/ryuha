@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=22 format=3]
+
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/back_air.tres" id="1_7njru"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/dash_attack.tres" id="2_bqnas"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/down_air.tres" id="3_887hf"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/down_smash.tres" id="4_6n7sk"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/down_special.tres" id="5_cijrb"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/down_special_air.tres" id="6_446rl"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/down_tilt.tres" id="7_c4qcx"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/forward_air.tres" id="8_ulqv3"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/forward_smash.tres" id="9_7yfie"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/forward_tilt.tres" id="10_8j5xh"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/jab.tres" id="11_q3en1"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/neutral_air.tres" id="12_x2vm5"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/neutral_special.tres" id="13_tn6kh"]
+[ext_resource type="Texture2D" path="res://data/characters/nodachi/nodachi_portrait.tres" id="14_8tw66"]
+[ext_resource type="Script" path="res://scripts/fighter/character_data.gd" id="15_mmcqs"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/side_special.tres" id="16_ietvs"]
+[ext_resource type="SpriteFrames" path="res://data/characters/nodachi/nodachi_frames.tres" id="17_rl246"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/up_air.tres" id="18_1d0lx"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/up_smash.tres" id="19_wh7ei"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/up_special.tres" id="20_srp0x"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/up_tilt.tres" id="21_wo5uo"]
+
+[resource]
+script = ExtResource("15_mmcqs")
+id = &"nodachi"
+display_name = "Gozan"
+title = "Nodachi Wielder"
+description = "A walking fortress. Slow to start but nearly impossible to approach from the air, and his armored overhead ends stocks absurdly early."
+signature_slot = &"down_special"
+scene_path = "res://scenes/fighters/nodachi.tscn"
+sprite_frames = ExtResource("17_rl246")
+portrait = ExtResource("14_8tw66")
+sprite_scale = 1.03382
+sprite_foot = Vector2(285, 231)
+accent_color = Color(0.86, 0.64, 0.25, 1)
+alt_tint = Color(0.8, 0.95, 1.15, 1)
+weight = 118.0
+walk_speed = 430.0
+run_speed = 900.0
+ground_accel = 4000.0
+ground_friction = 4200.0
+air_speed = 560.0
+air_accel = 2000.0
+air_friction = 800.0
+gravity = 3800.0
+max_fall_speed = 1420.0
+fast_fall_speed = 2100.0
+full_hop_height = 380.0
+short_hop_height = 175.0
+double_jump_height = 360.0
+air_jumps = 1
+jump_squat_frames = 4
+landing_frames = 5
+hurtbox_size = Vector2(78.4, 210.56)
+collision_size = Vector2(58.24, 147.84)
+jab = ExtResource("11_q3en1")
+dash_attack = ExtResource("2_bqnas")
+forward_tilt = ExtResource("10_8j5xh")
+up_tilt = ExtResource("21_wo5uo")
+down_tilt = ExtResource("7_c4qcx")
+forward_smash = ExtResource("9_7yfie")
+up_smash = ExtResource("19_wh7ei")
+down_smash = ExtResource("4_6n7sk")
+neutral_air = ExtResource("12_x2vm5")
+forward_air = ExtResource("8_ulqv3")
+back_air = ExtResource("1_7njru")
+up_air = ExtResource("18_1d0lx")
+down_air = ExtResource("3_887hf")
+neutral_special = ExtResource("13_tn6kh")
+side_special = ExtResource("16_ietvs")
+down_special = ExtResource("5_cijrb")
+up_special = ExtResource("20_srp0x")
+down_special_air = ExtResource("6_446rl")

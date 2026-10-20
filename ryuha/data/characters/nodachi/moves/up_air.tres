@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_cpap0"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="2_36lk7"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="3_uniyu"]
+
+[sub_resource type="Resource" id="Resource_fhtk7"]
+script = ExtResource("2_36lk7")
+id = 0
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 0
+offset = Vector2(0, -257.6)
+radius = 73.92
+size = Vector2(60, 40)
+damage = 14.0
+angle = 88.0
+base_knockback = 32.0
+knockback_growth = 98.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[resource]
+script = ExtResource("3_uniyu")
+id = &"up_air"
+display_name = "Crescent Ceiling"
+startup = 8
+active = 8
+recovery = 20
+landing_lag = 12
+chain_from_frame = 0
+hitboxes = Array[ExtResource("2_36lk7")]([SubResource("Resource_fhtk7")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = true
+grounded_only = false
+air_uses = 0
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 60.0
+swing_sfx = &"swing_light"
+trail_enabled = true
+trail_center = Vector2(0, -100.8)
+trail_radius = 196.0
+trail_from_deg = 10.0
+trail_to_deg = 170.0
+trail_width = 26.0
+behaviors = Array[ExtResource("1_cpap0")]([])

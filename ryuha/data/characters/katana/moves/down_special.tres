@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_fuocb"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/riposte.tres" id="2_l4puj"]
+[ext_resource type="Script" path="res://scripts/combat/behaviors/counter_behavior.gd" id="3_xk0vb"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="4_d7ppq"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="5_vm2jx"]
+
+[sub_resource type="Resource" id="Resource_tc03f"]
+script = ExtResource("3_xk0vb")
+window = Vector2i(4, 24)
+counter_move = ExtResource("2_l4puj")
+damage_multiplier = 1.25
+min_damage = 8.0
+
+[resource]
+script = ExtResource("5_vm2jx")
+id = &"down_special"
+display_name = "Iaido Counter"
+startup = 3
+active = 22
+recovery = 16
+landing_lag = 6
+chain_from_frame = 0
+hitboxes = Array[ExtResource("4_d7ppq")]([])
+gravity_scale = 0.4
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 0
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_startup"
+pose_recovery = &"attack_recovery"
+pose_tilt = 0.0
+swing_sfx = &"swing_light"
+trail_enabled = false
+trail_center = Vector2(0, -90)
+trail_radius = 80.0
+trail_from_deg = 60.0
+trail_to_deg = -30.0
+trail_width = 22.0
+behaviors = Array[ExtResource("1_fuocb")]([SubResource("Resource_tc03f")])

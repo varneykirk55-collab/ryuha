@@ -1,0 +1,92 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_0xuqc"]
+[ext_resource type="Script" path="res://scripts/combat/behaviors/motion_behavior.gd" id="2_73i6n"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="3_den6j"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="4_cxuhq"]
+
+[sub_resource type="Resource" id="Resource_ueg8p"]
+script = ExtResource("2_73i6n")
+start_frame = 4
+end_frame = 16
+velocity = Vector2(150, -1250)
+set_x = true
+set_y = true
+charge_bonus = 0.0
+air_only = false
+
+[sub_resource type="Resource" id="Resource_jqb7i"]
+script = ExtResource("3_den6j")
+id = 0
+group = 0
+start_frame = 5
+end_frame = 14
+rehit_rate = 4
+shape = 0
+offset = Vector2(22.4, -151.2)
+radius = 49.28
+size = Vector2(60, 40)
+damage = 2.0
+angle = 90.0
+base_knockback = 0.0
+knockback_growth = 100.0
+set_knockback = 30.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_tb5mk"]
+script = ExtResource("3_den6j")
+id = 1
+group = 1
+start_frame = 15
+end_frame = 18
+rehit_rate = 0
+shape = 0
+offset = Vector2(22.4, -201.6)
+radius = 53.76
+size = Vector2(60, 40)
+damage = 5.0
+angle = 80.0
+base_knockback = 55.0
+knockback_growth = 80.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[resource]
+script = ExtResource("4_cxuhq")
+id = &"up_special"
+display_name = "Rising Twin Fang"
+startup = 4
+active = 14
+recovery = 26
+landing_lag = 6
+chain_from_frame = 0
+hitboxes = Array[ExtResource("3_den6j")]([SubResource("Resource_jqb7i"), SubResource("Resource_tb5mk")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 0
+ends_in_helpless = true
+helpless_landing_lag = 22
+ledge_grab_from_frame = 10
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 55.0
+swing_sfx = &"swing_light"
+trail_enabled = true
+trail_center = Vector2(0, -100.8)
+trail_radius = 106.4
+trail_from_deg = 10.0
+trail_to_deg = 170.0
+trail_width = 26.0
+behaviors = Array[ExtResource("1_0xuqc")]([SubResource("Resource_ueg8p")])

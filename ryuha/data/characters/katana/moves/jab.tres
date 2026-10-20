@@ -1,0 +1,172 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_ejyjo"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="2_t5lrx"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="3_mmxk5"]
+
+[sub_resource type="Resource" id="Resource_c1rxb"]
+script = ExtResource("2_t5lrx")
+id = 0
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 0
+offset = Vector2(61.6, -106.4)
+radius = 33.6
+size = Vector2(60, 40)
+damage = 2.5
+angle = 80.0
+base_knockback = 20.0
+knockback_growth = 40.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_4ag56"]
+script = ExtResource("2_t5lrx")
+id = 0
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 0
+offset = Vector2(64.96, -100.8)
+radius = 33.6
+size = Vector2(60, 40)
+damage = 2.5
+angle = 80.0
+base_knockback = 20.0
+knockback_growth = 40.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_7trmy"]
+script = ExtResource("2_t5lrx")
+id = 0
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 0
+offset = Vector2(78.4, -106.4)
+radius = 40.32
+size = Vector2(60, 40)
+damage = 5.0
+angle = 40.0
+base_knockback = 55.0
+knockback_growth = 70.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_uut4e"]
+script = ExtResource("3_mmxk5")
+id = &"jab3"
+display_name = "Jab 3"
+startup = 4
+active = 3
+recovery = 20
+landing_lag = 6
+chain_from_frame = 0
+hitboxes = Array[ExtResource("2_t5lrx")]([SubResource("Resource_7trmy")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 0
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 0.0
+swing_sfx = &"swing_light"
+trail_enabled = true
+trail_center = Vector2(11.2, -100.8)
+trail_radius = 89.6
+trail_from_deg = 75.0
+trail_to_deg = -25.0
+trail_width = 24.0
+behaviors = Array[ExtResource("1_ejyjo")]([])
+
+[sub_resource type="Resource" id="Resource_xf8d3"]
+script = ExtResource("3_mmxk5")
+id = &"jab2"
+display_name = "Jab 2"
+startup = 3
+active = 2
+recovery = 14
+landing_lag = 6
+chain_from_frame = 6
+next_on_attack = SubResource("Resource_uut4e")
+hitboxes = Array[ExtResource("2_t5lrx")]([SubResource("Resource_4ag56")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 0
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 0.0
+swing_sfx = &"swing_light"
+trail_enabled = true
+trail_center = Vector2(11.2, -100.8)
+trail_radius = 78.4
+trail_from_deg = 75.0
+trail_to_deg = -25.0
+trail_width = 24.0
+behaviors = Array[ExtResource("1_ejyjo")]([])
+
+[resource]
+script = ExtResource("3_mmxk5")
+id = &"jab"
+display_name = "Jab"
+startup = 2
+active = 2
+recovery = 14
+landing_lag = 6
+chain_from_frame = 5
+next_on_attack = SubResource("Resource_xf8d3")
+hitboxes = Array[ExtResource("2_t5lrx")]([SubResource("Resource_c1rxb")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 0
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 0.0
+swing_sfx = &"swing_light"
+trail_enabled = true
+trail_center = Vector2(11.2, -100.8)
+trail_radius = 72.8
+trail_from_deg = 75.0
+trail_to_deg = -25.0
+trail_width = 24.0
+behaviors = Array[ExtResource("1_ejyjo")]([])

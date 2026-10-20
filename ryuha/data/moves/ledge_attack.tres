@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_qlpwj"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="2_1s3l1"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="3_uv2e8"]
+
+[sub_resource type="Resource" id="Resource_gowje"]
+script = ExtResource("2_1s3l1")
+id = 0
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 0
+offset = Vector2(78.4, -50.4)
+radius = 51.52
+size = Vector2(60, 40)
+damage = 8.0
+angle = 40.0
+base_knockback = 60.0
+knockback_growth = 45.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[resource]
+script = ExtResource("3_uv2e8")
+id = &"ledge_attack"
+display_name = "Ledge Attack"
+startup = 12
+active = 4
+recovery = 20
+landing_lag = 6
+chain_from_frame = 0
+hitboxes = Array[ExtResource("2_1s3l1")]([SubResource("Resource_gowje")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 0
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 0.0
+swing_sfx = &"swing_light"
+trail_enabled = true
+trail_center = Vector2(0, -44.8)
+trail_radius = 95.2
+trail_from_deg = 20.0
+trail_to_deg = -20.0
+trail_width = 20.0
+behaviors = Array[ExtResource("1_qlpwj")]([])

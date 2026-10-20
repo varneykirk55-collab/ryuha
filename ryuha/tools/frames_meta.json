@@ -1,0 +1,167 @@
+{
+ "nodachi": {
+  "canvas": [
+   570,
+   235
+  ],
+  "foot_y": 231,
+  "idle_height": 207,
+  "frames": {
+   "idle": [
+    "idle_0.png"
+   ],
+   "walk": [
+    "walk_0.png",
+    "walk_1.png",
+    "walk_2.png",
+    "walk_3.png"
+   ],
+   "jump": [
+    "jump_0.png"
+   ],
+   "fall": [
+    "fall_0.png"
+   ],
+   "hurt": [
+    "hurt_0.png"
+   ],
+   "attack_startup": [
+    "attack_startup_0.png"
+   ],
+   "attack_active": [
+    "attack_active_0.png"
+   ],
+   "attack_recovery": [
+    "attack_recovery_0.png"
+   ]
+  },
+  "head": [
+   267.0,
+   25
+  ]
+ },
+ "katana": {
+  "canvas": [
+   444,
+   206
+  ],
+  "foot_y": 202,
+  "idle_height": 198,
+  "frames": {
+   "idle": [
+    "idle_0.png"
+   ],
+   "walk": [
+    "walk_0.png",
+    "walk_1.png",
+    "walk_2.png",
+    "walk_3.png"
+   ],
+   "jump": [
+    "jump_0.png"
+   ],
+   "fall": [
+    "fall_0.png"
+   ],
+   "hurt": [
+    "hurt_0.png"
+   ],
+   "attack_startup": [
+    "attack_startup_0.png"
+   ],
+   "attack_active": [
+    "attack_active_0.png"
+   ],
+   "attack_recovery": [
+    "attack_recovery_0.png"
+   ]
+  },
+  "head": [
+   226.0,
+   5
+  ]
+ },
+ "naginata": {
+  "canvas": [
+   586,
+   216
+  ],
+  "foot_y": 212,
+  "idle_height": 208,
+  "frames": {
+   "idle": [
+    "idle_0.png"
+   ],
+   "walk": [
+    "walk_0.png",
+    "walk_1.png",
+    "walk_2.png",
+    "walk_3.png"
+   ],
+   "jump": [
+    "jump_0.png"
+   ],
+   "fall": [
+    "fall_0.png"
+   ],
+   "hurt": [
+    "hurt_0.png"
+   ],
+   "attack_startup": [
+    "attack_startup_0.png"
+   ],
+   "attack_active": [
+    "attack_active_0.png"
+   ],
+   "attack_recovery": [
+    "attack_recovery_0.png"
+   ]
+  },
+  "head": [
+   312.0,
+   5
+  ]
+ },
+ "ronin": {
+  "canvas": [
+   284,
+   178
+  ],
+  "foot_y": 174,
+  "idle_height": 170,
+  "frames": {
+   "idle": [
+    "idle_0.png"
+   ],
+   "walk": [
+    "walk_0.png",
+    "walk_1.png",
+    "walk_2.png",
+    "walk_3.png"
+   ],
+   "jump": [
+    "jump_0.png",
+    "jump_1.png"
+   ],
+   "fall": [
+    "fall_0.png"
+   ],
+   "hurt": [
+    "hurt_0.png"
+   ],
+   "attack_startup": [
+    "attack_startup_0.png"
+   ],
+   "attack_active": [
+    "attack_active_0.png"
+   ],
+   "attack_recovery": [
+    "attack_recovery_0.png"
+   ]
+  },
+  "head": [
+   153.0,
+   5
+  ]
+ }
+}

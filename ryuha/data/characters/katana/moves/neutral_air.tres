@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_crruo"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="2_cvcsb"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="3_f4gdn"]
+
+[sub_resource type="Resource" id="Resource_kbdo2"]
+script = ExtResource("2_cvcsb")
+id = 0
+group = 0
+start_frame = 5
+end_frame = 8
+rehit_rate = 0
+shape = 0
+offset = Vector2(0, -106.4)
+radius = 69.44
+size = Vector2(60, 40)
+damage = 8.0
+angle = 45.0
+base_knockback = 25.0
+knockback_growth = 90.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_0ahq2"]
+script = ExtResource("2_cvcsb")
+id = 1
+group = 0
+start_frame = 9
+end_frame = 14
+rehit_rate = 0
+shape = 0
+offset = Vector2(0, -106.4)
+radius = 64.96
+size = Vector2(60, 40)
+damage = 5.0
+angle = 45.0
+base_knockback = 20.0
+knockback_growth = 70.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[resource]
+script = ExtResource("3_f4gdn")
+id = &"neutral_air"
+display_name = "Neutral Air"
+startup = 4
+active = 10
+recovery = 14
+landing_lag = 7
+chain_from_frame = 0
+hitboxes = Array[ExtResource("2_cvcsb")]([SubResource("Resource_kbdo2"), SubResource("Resource_0ahq2")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = true
+grounded_only = false
+air_uses = 0
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 0.0
+swing_sfx = &"swing_light"
+trail_enabled = true
+trail_center = Vector2(0, -100.8)
+trail_radius = 84.0
+trail_from_deg = 0.0
+trail_to_deg = 330.0
+trail_width = 22.0
+behaviors = Array[ExtResource("1_crruo")]([])

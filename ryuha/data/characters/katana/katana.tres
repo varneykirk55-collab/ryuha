@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=21 format=3]
+
+[ext_resource type="Resource" path="res://data/characters/katana/moves/back_air.tres" id="1_nco5n"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/dash_attack.tres" id="2_f40ud"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/down_air.tres" id="3_up3nh"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/down_smash.tres" id="4_g4gcm"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/down_special.tres" id="5_ekbrn"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/down_tilt.tres" id="6_23qgg"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/forward_air.tres" id="7_xnxux"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/forward_smash.tres" id="8_xjcf7"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/forward_tilt.tres" id="9_acee2"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/jab.tres" id="10_kt8d1"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/neutral_air.tres" id="11_0ikmp"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/neutral_special.tres" id="12_wdvvp"]
+[ext_resource type="Texture2D" path="res://data/characters/katana/katana_portrait.tres" id="13_4wxgr"]
+[ext_resource type="Script" path="res://scripts/fighter/character_data.gd" id="14_05wdb"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/side_special.tres" id="15_wd2jb"]
+[ext_resource type="SpriteFrames" path="res://data/characters/katana/katana_frames.tres" id="16_46n6e"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/up_air.tres" id="17_h6d3m"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/up_smash.tres" id="18_a3nwc"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/up_special.tres" id="19_rtymg"]
+[ext_resource type="Resource" path="res://data/characters/katana/moves/up_tilt.tres" id="20_g8b57"]
+
+[resource]
+script = ExtResource("14_05wdb")
+id = &"katana"
+display_name = "Hayato"
+title = "Katana Specialist"
+description = "Fast and precise. Wins neutral with quick pokes and closes stocks with a charged quick-draw and a spiking down-air off the ledge."
+signature_slot = &"neutral_special"
+scene_path = "res://scenes/fighters/katana.tscn"
+sprite_frames = ExtResource("16_46n6e")
+portrait = ExtResource("13_4wxgr")
+sprite_scale = 0.989899
+sprite_foot = Vector2(222, 202)
+accent_color = Color(0.85, 0.29, 0.29, 1)
+alt_tint = Color(0.8, 0.9, 1.15, 1)
+weight = 90.0
+walk_speed = 600.0
+run_speed = 1180.0
+ground_accel = 5200.0
+ground_friction = 4400.0
+air_speed = 720.0
+air_accel = 2800.0
+air_friction = 1000.0
+gravity = 3400.0
+max_fall_speed = 1250.0
+fast_fall_speed = 1900.0
+full_hop_height = 430.0
+short_hop_height = 200.0
+double_jump_height = 410.0
+air_jumps = 1
+jump_squat_frames = 3
+landing_frames = 4
+hurtbox_size = Vector2(64.96, 190.4)
+collision_size = Vector2(49.28, 134.4)
+jab = ExtResource("10_kt8d1")
+dash_attack = ExtResource("2_f40ud")
+forward_tilt = ExtResource("9_acee2")
+up_tilt = ExtResource("20_g8b57")
+down_tilt = ExtResource("6_23qgg")
+forward_smash = ExtResource("8_xjcf7")
+up_smash = ExtResource("18_a3nwc")
+down_smash = ExtResource("4_g4gcm")
+neutral_air = ExtResource("11_0ikmp")
+forward_air = ExtResource("7_xnxux")
+back_air = ExtResource("1_nco5n")
+up_air = ExtResource("17_h6d3m")
+down_air = ExtResource("3_up3nh")
+neutral_special = ExtResource("12_wdvvp")
+side_special = ExtResource("15_wd2jb")
+down_special = ExtResource("5_ekbrn")
+up_special = ExtResource("19_rtymg")

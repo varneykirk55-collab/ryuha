@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="AudioLibrary" load_steps=16 format=3]
+
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/swing_light.wav" id="1_6cjon"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/swing_heavy.wav" id="2_wlycf"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/hit_light.wav" id="3_3wumy"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/hit_heavy.wav" id="4_8ofbm"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/clank.wav" id="5_q5fre"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/shield_hit.wav" id="6_osh6l"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/jump.wav" id="7_apwlu"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/land.wav" id="8_3lend"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/tech.wav" id="9_6xmge"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/ko.wav" id="10_gac5j"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/charge.wav" id="11_4b2mx"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/round_start.wav" id="12_fcxmx"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/menu_move.wav" id="13_x14vc"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/menu_confirm.wav" id="14_vs0bk"]
+[ext_resource type="Script" path="res://scripts/autoload/audio_library.gd" id="15_rofnd"]
+
+[resource]
+script = ExtResource("15_rofnd")
+events = {
+"charge": [ExtResource("11_4b2mx")],
+"clank": [ExtResource("5_q5fre")],
+"hit_heavy": [ExtResource("4_8ofbm")],
+"hit_light": [ExtResource("3_3wumy")],
+"jump": [ExtResource("7_apwlu")],
+"ko": [ExtResource("10_gac5j")],
+"land": [ExtResource("8_3lend")],
+"menu_confirm": [ExtResource("14_vs0bk")],
+"menu_move": [ExtResource("13_x14vc")],
+"round_start": [ExtResource("12_fcxmx")],
+"shield_hit": [ExtResource("6_osh6l")],
+"swing_heavy": [ExtResource("2_wlycf")],
+"swing_light": [ExtResource("1_6cjon")],
+"tech": [ExtResource("9_6xmge")]
+}
+volume = {
+"charge": -6.0,
+"jump": -6.0,
+"land": -8.0,
+"menu_move": -10.0
+}

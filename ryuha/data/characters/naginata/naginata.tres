@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=21 format=3]
+
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/back_air.tres" id="1_eeso8"]
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/dash_attack.tres" id="2_s4dwy"]
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/down_air.tres" id="3_v6vkg"]
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/down_smash.tres" id="4_qfglt"]
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/down_special.tres" id="5_tnclx"]
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/down_tilt.tres" id="6_a5ewr"]
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/forward_air.tres" id="7_8qhla"]
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/forward_smash.tres" id="8_5kn33"]
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/forward_tilt.tres" id="9_hijof"]
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/jab.tres" id="10_fe2u7"]
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/neutral_air.tres" id="11_i2bpn"]
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/neutral_special.tres" id="12_sffx5"]
+[ext_resource type="Texture2D" path="res://data/characters/naginata/naginata_portrait.tres" id="13_kb4pa"]
+[ext_resource type="Script" path="res://scripts/fighter/character_data.gd" id="14_dpof2"]
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/side_special.tres" id="15_m1puu"]
+[ext_resource type="SpriteFrames" path="res://data/characters/naginata/naginata_frames.tres" id="16_sdey6"]
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/up_air.tres" id="17_u2c1a"]
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/up_smash.tres" id="18_tyfwv"]
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/up_special.tres" id="19_y3v3d"]
+[ext_resource type="Resource" path="res://data/characters/naginata/moves/up_tilt.tres" id="20_d8l6t"]
+
+[resource]
+script = ExtResource("14_dpof2")
+id = &"naginata"
+display_name = "Tomoe"
+title = "Naginata Wielder"
+description = "Controls space with the longest reach in the dojo. Sour-spots up close, so keep enemies at the blade's tip."
+signature_slot = &"neutral_special"
+scene_path = "res://scenes/fighters/naginata.tscn"
+sprite_frames = ExtResource("16_sdey6")
+portrait = ExtResource("13_kb4pa")
+sprite_scale = 0.923077
+sprite_foot = Vector2(293, 212)
+accent_color = Color(0.64, 0.42, 0.85, 1)
+alt_tint = Color(1.15, 0.9, 0.8, 1)
+weight = 88.0
+walk_speed = 540.0
+run_speed = 1050.0
+ground_accel = 4600.0
+ground_friction = 4000.0
+air_speed = 660.0
+air_accel = 2400.0
+air_friction = 900.0
+gravity = 3200.0
+max_fall_speed = 1150.0
+fast_fall_speed = 1750.0
+full_hop_height = 440.0
+short_hop_height = 200.0
+double_jump_height = 440.0
+air_jumps = 1
+jump_squat_frames = 3
+landing_frames = 4
+hurtbox_size = Vector2(64.96, 188.16)
+collision_size = Vector2(49.28, 134.4)
+jab = ExtResource("10_fe2u7")
+dash_attack = ExtResource("2_s4dwy")
+forward_tilt = ExtResource("9_hijof")
+up_tilt = ExtResource("20_d8l6t")
+down_tilt = ExtResource("6_a5ewr")
+forward_smash = ExtResource("8_5kn33")
+up_smash = ExtResource("18_tyfwv")
+down_smash = ExtResource("4_qfglt")
+neutral_air = ExtResource("11_i2bpn")
+forward_air = ExtResource("7_8qhla")
+back_air = ExtResource("1_eeso8")
+up_air = ExtResource("17_u2c1a")
+down_air = ExtResource("3_v6vkg")
+neutral_special = ExtResource("12_sffx5")
+side_special = ExtResource("15_m1puu")
+down_special = ExtResource("5_tnclx")
+up_special = ExtResource("19_y3v3d")

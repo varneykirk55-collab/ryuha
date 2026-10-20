@@ -1,0 +1,144 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_40ia5"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="2_1buos"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="3_jmpah"]
+
+[sub_resource type="Resource" id="Resource_w2m5d"]
+script = ExtResource("2_1buos")
+id = 0
+group = 0
+start_frame = 11
+end_frame = 14
+rehit_rate = 0
+shape = 0
+offset = Vector2(156.8, -56)
+radius = 49.28
+size = Vector2(60, 40)
+damage = 3.0
+angle = 70.0
+base_knockback = 45.0
+knockback_growth = 20.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_mh0y2"]
+script = ExtResource("2_1buos")
+id = 1
+group = 1
+start_frame = 15
+end_frame = 18
+rehit_rate = 0
+shape = 0
+offset = Vector2(140, -168)
+radius = 51.52
+size = Vector2(60, 40)
+damage = 3.0
+angle = 80.0
+base_knockback = 45.0
+knockback_growth = 20.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_gly1h"]
+script = ExtResource("2_1buos")
+id = 2
+group = 2
+start_frame = 19
+end_frame = 23
+rehit_rate = 0
+shape = 0
+offset = Vector2(33.6, -240.8)
+radius = 56.0
+size = Vector2(60, 40)
+damage = 3.0
+angle = 88.0
+base_knockback = 45.0
+knockback_growth = 20.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_3p0h3"]
+script = ExtResource("2_1buos")
+id = 3
+group = 3
+start_frame = 24
+end_frame = 30
+rehit_rate = 0
+shape = 0
+offset = Vector2(67.2, -224)
+radius = 56.0
+size = Vector2(60, 40)
+damage = 8.0
+angle = 80.0
+base_knockback = 60.0
+knockback_growth = 95.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_2cnuc"]
+script = ExtResource("2_1buos")
+id = 4
+group = 3
+start_frame = 24
+end_frame = 30
+rehit_rate = 0
+shape = 0
+offset = Vector2(-56, -207.2)
+radius = 51.52
+size = Vector2(60, 40)
+damage = 8.0
+angle = 80.0
+base_knockback = 60.0
+knockback_growth = 95.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[resource]
+script = ExtResource("3_jmpah")
+id = &"neutral_special"
+display_name = "Whirlwind Arc"
+startup = 10
+active = 20
+recovery = 24
+landing_lag = 6
+chain_from_frame = 0
+hitboxes = Array[ExtResource("2_1buos")]([SubResource("Resource_w2m5d"), SubResource("Resource_mh0y2"), SubResource("Resource_gly1h"), SubResource("Resource_3p0h3"), SubResource("Resource_2cnuc")])
+gravity_scale = 0.35
+allow_drift = false
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 0
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 0.0
+swing_sfx = &"swing_heavy"
+trail_enabled = true
+trail_center = Vector2(0, -123.2)
+trail_radius = 179.2
+trail_from_deg = -20.0
+trail_to_deg = 200.0
+trail_width = 34.0
+behaviors = Array[ExtResource("1_40ia5")]([])

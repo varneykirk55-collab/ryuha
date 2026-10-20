@@ -1,0 +1,93 @@
+[gd_resource type="SpriteFrames" load_steps=13 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/characters/ronin/attack_active_0.png" id="1_3oje5"]
+[ext_resource type="Texture2D" path="res://assets/characters/ronin/attack_recovery_0.png" id="2_dtgbp"]
+[ext_resource type="Texture2D" path="res://assets/characters/ronin/attack_startup_0.png" id="3_5vrup"]
+[ext_resource type="Texture2D" path="res://assets/characters/ronin/fall_0.png" id="4_bnijt"]
+[ext_resource type="Texture2D" path="res://assets/characters/ronin/hurt_0.png" id="5_rktn7"]
+[ext_resource type="Texture2D" path="res://assets/characters/ronin/idle_0.png" id="6_vkx0e"]
+[ext_resource type="Texture2D" path="res://assets/characters/ronin/jump_0.png" id="7_r1npf"]
+[ext_resource type="Texture2D" path="res://assets/characters/ronin/jump_1.png" id="8_ndxy0"]
+[ext_resource type="Texture2D" path="res://assets/characters/ronin/walk_0.png" id="9_7ke8v"]
+[ext_resource type="Texture2D" path="res://assets/characters/ronin/walk_1.png" id="10_jqjyj"]
+[ext_resource type="Texture2D" path="res://assets/characters/ronin/walk_2.png" id="11_suvgp"]
+[ext_resource type="Texture2D" path="res://assets/characters/ronin/walk_3.png" id="12_o2smt"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3oje5")
+}],
+"loop": false,
+"name": &"attack_active",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dtgbp")
+}],
+"loop": false,
+"name": &"attack_recovery",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5vrup")
+}],
+"loop": false,
+"name": &"attack_startup",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_bnijt")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rktn7")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_vkx0e")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_r1npf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ndxy0")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_7ke8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jqjyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_suvgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_o2smt")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 9.0
+}]

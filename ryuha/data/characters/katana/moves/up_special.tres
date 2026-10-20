@@ -1,0 +1,92 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_opy7u"]
+[ext_resource type="Script" path="res://scripts/combat/behaviors/motion_behavior.gd" id="2_nnbbq"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="3_u3m5k"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="4_xwih4"]
+
+[sub_resource type="Resource" id="Resource_mblxb"]
+script = ExtResource("2_nnbbq")
+start_frame = 3
+end_frame = 16
+velocity = Vector2(250, -1550)
+set_x = true
+set_y = true
+charge_bonus = 0.0
+air_only = false
+
+[sub_resource type="Resource" id="Resource_8ceke"]
+script = ExtResource("3_u3m5k")
+id = 0
+group = 0
+start_frame = 4
+end_frame = 9
+rehit_rate = 0
+shape = 0
+offset = Vector2(28, -140)
+radius = 51.52
+size = Vector2(60, 40)
+damage = 6.0
+angle = 85.0
+base_knockback = 45.0
+knockback_growth = 50.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_tyy41"]
+script = ExtResource("3_u3m5k")
+id = 1
+group = 1
+start_frame = 10
+end_frame = 16
+rehit_rate = 0
+shape = 0
+offset = Vector2(22.4, -201.6)
+radius = 51.52
+size = Vector2(60, 40)
+damage = 5.0
+angle = 80.0
+base_knockback = 60.0
+knockback_growth = 80.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[resource]
+script = ExtResource("4_xwih4")
+id = &"up_special"
+display_name = "Rising Crescent"
+startup = 3
+active = 14
+recovery = 22
+landing_lag = 6
+chain_from_frame = 0
+hitboxes = Array[ExtResource("3_u3m5k")]([SubResource("Resource_8ceke"), SubResource("Resource_tyy41")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 0
+ends_in_helpless = true
+helpless_landing_lag = 18
+ledge_grab_from_frame = 8
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 50.0
+swing_sfx = &"swing_light"
+trail_enabled = true
+trail_center = Vector2(0, -100.8)
+trail_radius = 123.2
+trail_from_deg = 10.0
+trail_to_deg = 170.0
+trail_width = 26.0
+behaviors = Array[ExtResource("1_opy7u")]([SubResource("Resource_mblxb")])

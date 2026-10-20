@@ -1,0 +1,172 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_akmmd"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="2_pbgcs"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="3_esjv2"]
+
+[sub_resource type="Resource" id="Resource_068fv"]
+script = ExtResource("2_pbgcs")
+id = 0
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 0
+offset = Vector2(53.76, -106.4)
+radius = 35.84
+size = Vector2(60, 40)
+damage = 3.0
+angle = 75.0
+base_knockback = 20.0
+knockback_growth = 35.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_23xnv"]
+script = ExtResource("2_pbgcs")
+id = 0
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 0
+offset = Vector2(56, -100.8)
+radius = 35.84
+size = Vector2(60, 40)
+damage = 3.0
+angle = 75.0
+base_knockback = 20.0
+knockback_growth = 35.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_dpulh"]
+script = ExtResource("2_pbgcs")
+id = 0
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 0
+offset = Vector2(61.6, -103.04)
+radius = 42.56
+size = Vector2(60, 40)
+damage = 6.0
+angle = 45.0
+base_knockback = 50.0
+knockback_growth = 70.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_ju7oj"]
+script = ExtResource("3_esjv2")
+id = &"jab3"
+display_name = "Twin Cut 3"
+startup = 3
+active = 3
+recovery = 18
+landing_lag = 6
+chain_from_frame = 0
+hitboxes = Array[ExtResource("2_pbgcs")]([SubResource("Resource_dpulh")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 0
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 0.0
+swing_sfx = &"swing_light"
+trail_enabled = true
+trail_center = Vector2(11.2, -100.8)
+trail_radius = 84.0
+trail_from_deg = 75.0
+trail_to_deg = -25.0
+trail_width = 24.0
+behaviors = Array[ExtResource("1_akmmd")]([])
+
+[sub_resource type="Resource" id="Resource_8ujed"]
+script = ExtResource("3_esjv2")
+id = &"jab2"
+display_name = "Twin Cut 2"
+startup = 2
+active = 2
+recovery = 12
+landing_lag = 6
+chain_from_frame = 5
+next_on_attack = SubResource("Resource_ju7oj")
+hitboxes = Array[ExtResource("2_pbgcs")]([SubResource("Resource_23xnv")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 0
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 0.0
+swing_sfx = &"swing_light"
+trail_enabled = true
+trail_center = Vector2(11.2, -100.8)
+trail_radius = 72.8
+trail_from_deg = 75.0
+trail_to_deg = -25.0
+trail_width = 24.0
+behaviors = Array[ExtResource("1_akmmd")]([])
+
+[resource]
+script = ExtResource("3_esjv2")
+id = &"jab"
+display_name = "Twin Cut"
+startup = 2
+active = 2
+recovery = 12
+landing_lag = 6
+chain_from_frame = 5
+next_on_attack = SubResource("Resource_8ujed")
+hitboxes = Array[ExtResource("2_pbgcs")]([SubResource("Resource_068fv")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 0
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 0.0
+swing_sfx = &"swing_light"
+trail_enabled = true
+trail_center = Vector2(11.2, -100.8)
+trail_radius = 67.2
+trail_from_deg = 75.0
+trail_to_deg = -25.0
+trail_width = 24.0
+behaviors = Array[ExtResource("1_akmmd")]([])

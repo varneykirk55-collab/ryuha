@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_rochp"]
+[ext_resource type="Script" path="res://scripts/combat/behaviors/motion_behavior.gd" id="2_mcscg"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="3_3b2wq"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="4_lxypt"]
+
+[sub_resource type="Resource" id="Resource_oe77y"]
+script = ExtResource("2_mcscg")
+start_frame = 1
+end_frame = 14
+velocity = Vector2(800, 0)
+set_x = true
+set_y = false
+charge_bonus = 0.0
+air_only = false
+
+[sub_resource type="Resource" id="Resource_enyck"]
+script = ExtResource("3_3b2wq")
+id = 0
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 0
+offset = Vector2(61.6, -106.4)
+radius = 53.76
+size = Vector2(60, 40)
+damage = 12.0
+angle = 40.0
+base_knockback = 55.0
+knockback_growth = 70.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[resource]
+script = ExtResource("4_lxypt")
+id = &"dash_attack"
+display_name = "Shoulder Rush"
+startup = 10
+active = 6
+recovery = 26
+landing_lag = 6
+chain_from_frame = 0
+hitboxes = Array[ExtResource("3_3b2wq")]([SubResource("Resource_enyck")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 0
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 0.0
+swing_sfx = &"swing_light"
+trail_enabled = true
+trail_center = Vector2(11.2, -100.8)
+trail_radius = 89.6
+trail_from_deg = 75.0
+trail_to_deg = -25.0
+trail_width = 24.0
+behaviors = Array[ExtResource("1_rochp")]([SubResource("Resource_oe77y")])

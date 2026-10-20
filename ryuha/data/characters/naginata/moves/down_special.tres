@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_t6lut"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="2_6bmko"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="3_awocj"]
+
+[sub_resource type="Resource" id="Resource_duslj"]
+script = ExtResource("2_6bmko")
+id = 0
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 0
+offset = Vector2(168, -28)
+radius = 40.32
+size = Vector2(60, 40)
+damage = 9.0
+angle = 75.0
+base_knockback = 55.0
+knockback_growth = 60.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_n16xe"]
+script = ExtResource("2_6bmko")
+id = 1
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 0
+offset = Vector2(-168, -28)
+radius = 40.32
+size = Vector2(60, 40)
+damage = 9.0
+angle = 105.0
+base_knockback = 55.0
+knockback_growth = 60.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[resource]
+script = ExtResource("3_awocj")
+id = &"down_special"
+display_name = "Guard Sweep"
+startup = 9
+active = 5
+recovery = 26
+landing_lag = 6
+chain_from_frame = 0
+hitboxes = Array[ExtResource("2_6bmko")]([SubResource("Resource_duslj"), SubResource("Resource_n16xe")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 0
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = -8.0
+swing_sfx = &"swing_light"
+trail_enabled = true
+trail_center = Vector2(0, -44.8)
+trail_radius = 168.0
+trail_from_deg = -10.0
+trail_to_deg = 190.0
+trail_width = 24.0
+behaviors = Array[ExtResource("1_t6lut")]([])

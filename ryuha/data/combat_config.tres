@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="CombatConfig" load_steps=4 format=3]
+
+[ext_resource type="Resource" path="res://data/moves/getup_attack.tres" id="1_su25b"]
+[ext_resource type="Resource" path="res://data/moves/ledge_attack.tres" id="2_vaovj"]
+[ext_resource type="Script" path="res://scripts/combat/combat_config.gd" id="3_pts3i"]
+
+[resource]
+script = ExtResource("3_pts3i")
+launch_speed_per_kb = 16.0
+launch_decay = 1900.0
+hitstun_per_kb = 0.4
+tumble_threshold = 80.0
+di_max_degrees = 18.0
+default_weight = 100.0
+hitlag_base = 4.0
+hitlag_per_damage = 0.45
+hitlag_max = 22
+shake_per_kb = 0.006
+shake_kb_floor = 45.0
+strong_hit_kb = 95.0
+tech_window_frames = 20
+tech_lockout_frames = 40
+shield_max = 50.0
+shield_regen_per_frame = 0.08
+shield_decay_per_frame = 0.13
+shield_break_stun_frames = 200
+clank_damage_window = 9.0
+ledge_intangibility_frames = 45
+ledge_max_hang_frames = 300
+ledge_regrab_cooldown = 30
+ledge_getup_frames = 26
+respawn_delay_frames = 50
+respawn_invincibility_frames = 150
+respawn_platform_max_frames = 240
+sudden_death_percent = 300.0
+buffer_frames = 7
+getup_attack = ExtResource("1_su25b")
+ledge_attack = ExtResource("2_vaovj")

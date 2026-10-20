@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_ob626"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="2_qftdc"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="3_d65ma"]
+
+[sub_resource type="Resource" id="Resource_77re2"]
+script = ExtResource("2_qftdc")
+id = 0
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 0
+offset = Vector2(162.4, -22.4)
+radius = 31.36
+size = Vector2(60, 40)
+damage = 8.0
+angle = 20.0
+base_knockback = 40.0
+knockback_growth = 55.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_wkt6y"]
+script = ExtResource("2_qftdc")
+id = 1
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 0
+offset = Vector2(78.4, -22.4)
+radius = 24.64
+size = Vector2(60, 40)
+damage = 4.0
+angle = 30.0
+base_knockback = 25.0
+knockback_growth = 40.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[resource]
+script = ExtResource("3_d65ma")
+id = &"down_tilt"
+display_name = "Ankle Sweep"
+startup = 7
+active = 3
+recovery = 18
+landing_lag = 6
+chain_from_frame = 0
+hitboxes = Array[ExtResource("2_qftdc")]([SubResource("Resource_77re2"), SubResource("Resource_wkt6y")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 0
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = -10.0
+swing_sfx = &"swing_light"
+trail_enabled = true
+trail_center = Vector2(0, -44.8)
+trail_radius = 168.0
+trail_from_deg = 20.0
+trail_to_deg = -20.0
+trail_width = 20.0
+behaviors = Array[ExtResource("1_ob626")]([])

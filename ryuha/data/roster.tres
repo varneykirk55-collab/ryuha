@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Roster" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/fighter/character_data.gd" id="1_x4r08"]
+[ext_resource type="Resource" path="res://data/characters/katana/katana.tres" id="2_rxtps"]
+[ext_resource type="Resource" path="res://data/characters/naginata/naginata.tres" id="3_pyajv"]
+[ext_resource type="Resource" path="res://data/characters/ronin/ronin.tres" id="4_k5qwf"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/nodachi.tres" id="5_6wltm"]
+[ext_resource type="Script" path="res://scripts/fighter/roster.gd" id="6_jthyn"]
+
+[resource]
+script = ExtResource("6_jthyn")
+characters = Array[ExtResource("1_x4r08")]([ExtResource("2_rxtps"), ExtResource("3_pyajv"), ExtResource("4_k5qwf"), ExtResource("5_6wltm")])
+stages = PackedStringArray("res://scenes/stages/dojo.tscn")

@@ -1,0 +1,92 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_niw5y"]
+[ext_resource type="Script" path="res://scripts/combat/behaviors/motion_behavior.gd" id="2_we6mp"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="3_yitva"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="4_p1sl6"]
+
+[sub_resource type="Resource" id="Resource_xc2wm"]
+script = ExtResource("2_we6mp")
+start_frame = 11
+end_frame = 17
+velocity = Vector2(800, 0)
+set_x = true
+set_y = false
+charge_bonus = 0.0
+air_only = false
+
+[sub_resource type="Resource" id="Resource_7c1v8"]
+script = ExtResource("3_yitva")
+id = 0
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 0
+offset = Vector2(274.4, -103.04)
+radius = 31.36
+size = Vector2(60, 40)
+damage = 14.0
+angle = 38.0
+base_knockback = 50.0
+knockback_growth = 88.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_65vvj"]
+script = ExtResource("3_yitva")
+id = 1
+group = 0
+start_frame = 0
+end_frame = 0
+rehit_rate = 0
+shape = 1
+offset = Vector2(179.2, -103.04)
+radius = 0.0
+size = Vector2(168, 40.32)
+damage = 10.0
+angle = 40.0
+base_knockback = 45.0
+knockback_growth = 80.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[resource]
+script = ExtResource("4_p1sl6")
+id = &"side_special"
+display_name = "Long Reach Thrust"
+startup = 13
+active = 4
+recovery = 26
+landing_lag = 6
+chain_from_frame = 0
+hitboxes = Array[ExtResource("3_yitva")]([SubResource("Resource_7c1v8"), SubResource("Resource_65vvj")])
+gravity_scale = 1.0
+allow_drift = true
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 1
+ends_in_helpless = false
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 0.0
+swing_sfx = &"swing_heavy"
+trail_enabled = true
+trail_center = Vector2(11.2, -100.8)
+trail_radius = 257.6
+trail_from_deg = 75.0
+trail_to_deg = -25.0
+trail_width = 24.0
+behaviors = Array[ExtResource("1_niw5y")]([SubResource("Resource_xc2wm")])

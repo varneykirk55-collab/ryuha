@@ -1,0 +1,102 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_36uqq"]
+[ext_resource type="Script" path="res://scripts/combat/behaviors/motion_behavior.gd" id="2_2m25y"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="3_1uys7"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="4_vkn8f"]
+
+[sub_resource type="Resource" id="Resource_po24k"]
+script = ExtResource("2_2m25y")
+start_frame = 9
+end_frame = 38
+velocity = Vector2(950, 0)
+set_x = true
+set_y = false
+charge_bonus = 0.0
+air_only = false
+
+[sub_resource type="Resource" id="Resource_703tb"]
+script = ExtResource("2_2m25y")
+start_frame = 39
+end_frame = 44
+velocity = Vector2(150, 0)
+set_x = true
+set_y = false
+charge_bonus = 0.0
+air_only = false
+
+[sub_resource type="Resource" id="Resource_kag0d"]
+script = ExtResource("3_1uys7")
+id = 0
+group = 0
+start_frame = 9
+end_frame = 38
+rehit_rate = 4
+shape = 0
+offset = Vector2(64.96, -103.04)
+radius = 53.76
+size = Vector2(60, 40)
+damage = 1.6
+angle = 20.0
+base_knockback = 0.0
+knockback_growth = 100.0
+set_knockback = 30.0
+hit_away_from_center = false
+hitlag_multiplier = 0.5
+shield_damage = 0.0
+hit_sfx = &""
+
+[sub_resource type="Resource" id="Resource_ywljd"]
+script = ExtResource("3_1uys7")
+id = 1
+group = 1
+start_frame = 40
+end_frame = 43
+rehit_rate = 0
+shape = 0
+offset = Vector2(64.96, -125.44)
+radius = 62.72
+size = Vector2(60, 40)
+damage = 7.0
+angle = 82.0
+base_knockback = 75.0
+knockback_growth = 105.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.5
+shield_damage = 0.0
+hit_sfx = &""
+
+[resource]
+script = ExtResource("4_vkn8f")
+id = &"side_special"
+display_name = "Thousand Cuts Rush"
+startup = 8
+active = 34
+recovery = 26
+landing_lag = 6
+chain_from_frame = 0
+hitboxes = Array[ExtResource("3_1uys7")]([SubResource("Resource_kag0d"), SubResource("Resource_ywljd")])
+gravity_scale = 0.25
+allow_drift = false
+friction_scale = 1.0
+cancel_on_land = true
+is_aerial = false
+grounded_only = false
+air_uses = 1
+ends_in_helpless = true
+helpless_landing_lag = 22
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = 0.0
+swing_sfx = &"swing_heavy"
+trail_enabled = true
+trail_center = Vector2(0, -106.4)
+trail_radius = 84.0
+trail_from_deg = 120.0
+trail_to_deg = -120.0
+trail_width = 26.0
+behaviors = Array[ExtResource("1_36uqq")]([SubResource("Resource_po24k"), SubResource("Resource_703tb")])

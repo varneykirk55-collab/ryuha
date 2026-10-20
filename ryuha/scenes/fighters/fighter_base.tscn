@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/fighter/fighter.gd" id="1_fighter"]
+[ext_resource type="Script" path="res://scripts/fighter/fighter_overlay.gd" id="2_overlay"]
+
+[node name="Fighter" type="CharacterBody2D"]
+script = ExtResource("1_fighter")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+
+[node name="Visual" type="Node2D" parent="."]
+
+[node name="Body" type="Node2D" parent="Visual"]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Visual/Body"]
+centered = false
+
+[node name="Overlay" type="Node2D" parent="."]
+script = ExtResource("2_overlay")

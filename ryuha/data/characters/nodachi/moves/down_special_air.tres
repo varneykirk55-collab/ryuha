@@ -1,0 +1,88 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/behaviors/move_behavior.gd" id="1_nybem"]
+[ext_resource type="Script" path="res://scripts/combat/behaviors/motion_behavior.gd" id="2_ticq6"]
+[ext_resource type="Resource" path="res://data/characters/nodachi/moves/cleave_shock.tres" id="3_e4hiu"]
+[ext_resource type="Script" path="res://scripts/combat/behaviors/landing_followup_behavior.gd" id="4_5gak2"]
+[ext_resource type="Script" path="res://scripts/combat/hitbox_data.gd" id="5_bd3ai"]
+[ext_resource type="Script" path="res://scripts/combat/move_data.gd" id="6_iehp7"]
+
+[sub_resource type="Resource" id="Resource_uclhc"]
+script = ExtResource("2_ticq6")
+start_frame = 1
+end_frame = 8
+velocity = Vector2(0, -300)
+set_x = true
+set_y = true
+charge_bonus = 0.0
+air_only = false
+
+[sub_resource type="Resource" id="Resource_l4rod"]
+script = ExtResource("2_ticq6")
+start_frame = 9
+end_frame = 40
+velocity = Vector2(0, 1800)
+set_x = true
+set_y = true
+charge_bonus = 0.0
+air_only = false
+
+[sub_resource type="Resource" id="Resource_61vtf"]
+script = ExtResource("4_5gak2")
+followup = ExtResource("3_e4hiu")
+from_frame = 8
+
+[sub_resource type="Resource" id="Resource_hvg8u"]
+script = ExtResource("5_bd3ai")
+id = 0
+group = 0
+start_frame = 9
+end_frame = 40
+rehit_rate = 0
+shape = 0
+offset = Vector2(44.8, -44.8)
+radius = 58.24
+size = Vector2(60, 40)
+damage = 14.0
+angle = 280.0
+base_knockback = 30.0
+knockback_growth = 80.0
+set_knockback = 0.0
+hit_away_from_center = false
+hitlag_multiplier = 1.0
+shield_damage = 0.0
+hit_sfx = &""
+
+[resource]
+script = ExtResource("6_iehp7")
+id = &"down_special_air"
+display_name = "Falling Cleave"
+startup = 10
+active = 30
+recovery = 20
+landing_lag = 6
+chain_from_frame = 0
+hitboxes = Array[ExtResource("5_bd3ai")]([SubResource("Resource_hvg8u")])
+gravity_scale = 1.0
+allow_drift = false
+friction_scale = 1.0
+cancel_on_land = false
+is_aerial = false
+grounded_only = false
+air_uses = 0
+ends_in_helpless = true
+helpless_landing_lag = 20
+ledge_grab_from_frame = 0
+intangible_frames = Vector2i(0, 0)
+pose_startup = &"attack_startup"
+pose_active = &"attack_active"
+pose_recovery = &"attack_recovery"
+pose_tilt = -45.0
+swing_sfx = &"swing_light"
+trail_enabled = true
+trail_center = Vector2(0, -67.2)
+trail_radius = 134.4
+trail_from_deg = 200.0
+trail_to_deg = 340.0
+trail_width = 26.0
+behaviors = Array[ExtResource("1_nybem")]([SubResource("Resource_uclhc"), SubResource("Resource_l4rod"), SubResource("Resource_61vtf")])
